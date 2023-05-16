@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Exercise 1</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div>
+          <h2>City Directory</h2>
+          <form id="form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label>City Name</label>
+              <input
+                type="text"
+                placeholder="City Name"
+                id="cityName"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Country</label>
+              <input type="text" placeholder="Country" id="country" required />
+            </div>
+            <div class="form-group">
+              <label>Population</label>
+              <input
+                type="text"
+                placeholder="Population"
+                id="population"
+                required
+              />
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+        </div>
+        <div class="search">
+          <div class="search-container">
+            <input
+              type="text"
+              id="search"
+              placeholder="Search city names, countries"
+              onkeyup="handleSearch()"
+            />
+            <i class="ri-search-line" id="search-icon"></i>
+          </div>
+          <table>
+            <thead>
+              <th>City Name</th>
+              <th>Country</th>
+              <th>Population</th>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      var exports = { __esModule: { value: true } };
+    </script>
+    <script src="./index.js"></script>
+  </body>
+</html>
